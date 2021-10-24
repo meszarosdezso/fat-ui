@@ -1,0 +1,70 @@
+#Home {
+  padding: 4rem;
+
+  section {
+    margin: 3rem 0;
+  }
+
+  .color-groups {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+
+    .color-group {
+      h4 {
+        text-transform: uppercase;
+        margin-bottom: 0.3rem;
+      }
+
+      .color-dots {
+        display: flex;
+        .color-dot {
+          width: 3.2rem;
+          height: 3.2rem;
+          border-radius: 50%;
+
+          &:not(:first-child) {
+            margin-left: -1.1rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    padding: 2rem;
+
+    .color-groups .color-group {
+      .color-dots {
+        .color-dot {
+          width: 2.4rem;
+          height: 2.4rem;
+        }
+      }
+    }
+  }
+
+  .buttons,
+  .chips,
+  .cards,
+  .form-elements,
+  .lists {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .fontface {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  #copyright {
+    opacity: 0.4;
+    margin-top: 10rem;
+  }
+}

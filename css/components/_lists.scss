@@ -1,0 +1,82 @@
+.list {
+  background: var(--card-bg);
+  border-radius: var(--radius-default);
+  padding: 0.3rem;
+  box-shadow: 0 0.4rem 1rem #0001;
+  list-style: none;
+  font-size: 0.9rem;
+  min-width: 200px;
+
+  li {
+    padding: 0.5rem;
+    border-radius: var(--radius-default);
+    transition: background-color 100ms ease-out;
+    background-color: var(--card-bg);
+
+    &.with-icon {
+      @include auto-grid(2);
+      justify-content: flex-start;
+
+      .list-item-icon {
+        margin-right: 0.75rem;
+      }
+    }
+
+    &:hover {
+      background-color: var(--grey-100);
+    }
+  }
+
+  &.separated {
+    background: none;
+    box-shadow: none;
+    padding: 0;
+
+    li {
+      box-shadow: 0 0.3rem 0.7rem #0001;
+      padding: 0.6rem;
+
+      &:not(:first-child) {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  &.deep {
+    background: var(--grey-50);
+    box-shadow: inset 0px 0px 0.7rem -4px #0003;
+
+    li {
+      background-color: transparent;
+
+      &:hover {
+        background-color: var(--grey-100);
+      }
+    }
+  }
+
+  &.menu {
+    li {
+      @include pressable;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      background: var(--dialog-bg);
+      padding: 0;
+
+      a {
+        padding-left: 0.9rem;
+        padding: 0.7rem;
+        display: block;
+      }
+
+      &:hover {
+        background: var(--grey-50);
+      }
+
+      &:not(:first-child) {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}

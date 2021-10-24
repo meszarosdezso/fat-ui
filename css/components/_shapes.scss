@@ -1,0 +1,25 @@
+.circle {
+  @include centered;
+  width: var(--circle-size-default);
+  height: var(--circle-size-default);
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+
+  &.sm {
+    width: var(--circle-size-sm);
+    height: var(--circle-size-sm);
+  }
+
+  &.md {
+    width: var(--circle-size-md);
+    height: var(--circle-size-md);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

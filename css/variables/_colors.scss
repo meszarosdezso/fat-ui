@@ -1,0 +1,181 @@
+:root {
+  --primary-50: hsl(25, 100%, 96%);
+  --primary-100: hsl(25, 100%, 83%);
+  --primary-400: hsl(25, 91%, 54%);
+  --primary-700: hsl(25, 91%, 40%);
+  --primary-900: hsl(25, 91%, 28%);
+
+  --secondary-50: hsl(354, 100%, 96%);
+  --secondary-100: hsl(354, 64%, 83%);
+  --secondary-400: hsl(354, 51%, 40%);
+  --secondary-700: hsl(354, 51%, 30%);
+  --secondary-900: hsl(354, 51%, 20%);
+
+  --royal-50: hsl(215, 100%, 96%);
+  --royal-100: hsl(216, 100%, 83%);
+  --royal-400: hsl(215, 91%, 50%);
+  --royal-700: hsl(215, 71%, 32%);
+  --royal-900: hsl(215, 41%, 18%);
+
+  --sea-50: hsl(157, 84%, 96%);
+  --sea-100: hsl(157, 60%, 84%);
+  --sea-400: hsl(157, 74%, 42%);
+  --sea-700: hsl(157, 60%, 30%);
+  --sea-900: hsl(157, 50%, 18%);
+
+  --plum-50: hsl(263, 100%, 96%);
+  --plum-100: hsl(263, 80%, 83%);
+  --plum-400: hsl(263, 66%, 55%);
+  --plum-700: hsl(263, 56%, 34%);
+  --plum-900: hsl(263, 50%, 20%);
+
+  --danger-50: hsl(0, 90%, 96%);
+  --danger-100: hsl(0, 80%, 83%);
+  --danger-400: hsl(0, 74%, 48%);
+  --danger-700: hsl(0, 78%, 28%);
+  --danger-900: hsl(0, 80%, 20%);
+
+  --warn-50: hsl(36, 100%, 94%);
+  --warn-100: hsl(36, 100%, 86%);
+  --warn-400: hsl(36, 100%, 50%);
+  --warn-700: hsl(36, 90%, 36%);
+  --warn-900: hsl(36, 80%, 26%);
+
+  --grey-50: hsl(200, 5%, 94%);
+  --grey-100: hsl(200, 5%, 86%);
+  --grey-200: hsl(200, 5%, 79%);
+  --grey-300: hsl(200, 5%, 68%);
+  --grey-400: hsl(200, 5%, 56%);
+  --grey-500: hsl(200, 5%, 48%);
+  --grey-700: hsl(200, 5%, 32%);
+  --grey-800: hsl(200, 5%, 24%);
+  --grey-900: hsl(200, 5%, 12%);
+
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+
+  --text-1: hsl(0, 0%, 0%);
+  --text-2: hsl(0, 0%, 25%);
+  --text-link: var(--primary-400);
+
+  --bg-1: hsl(0, 0%, 100%);
+
+  --card-bg: var(--white);
+  --dialog-bg: var(--white);
+  --table-bg: var(--white);
+  --table-header-bg: var(--grey-50);
+}
+
+:root[data-theme='dark'] {
+  --primary-900: hsl(25, 100%, 96%);
+  --primary-700: hsl(25, 100%, 83%);
+  --primary-400: hsl(25, 91%, 54%);
+  --primary-100: hsl(25, 91%, 40%);
+  --primary-50: hsl(25, 91%, 28%);
+
+  --secondary-900: hsl(354, 100%, 96%);
+  --secondary-700: hsl(354, 64%, 83%);
+  --secondary-400: hsl(354, 51%, 45%);
+  --secondary-100: hsl(354, 51%, 30%);
+  --secondary-50: hsl(354, 51%, 20%);
+
+  --royal-900: hsl(215, 100%, 96%);
+  --royal-700: hsl(216, 100%, 83%);
+  --royal-400: hsl(215, 81%, 54%);
+  --royal-100: hsl(215, 71%, 40%);
+  --royal-50: hsl(215, 41%, 24%);
+
+  --sea-900: hsl(157, 84%, 96%);
+  --sea-700: hsl(157, 60%, 84%);
+  --sea-400: hsl(157, 74%, 42%);
+  --sea-100: hsl(157, 60%, 30%);
+  --sea-50: hsl(157, 50%, 16%);
+
+  --plum-900: hsl(263, 100%, 96%);
+  --plum-700: hsl(263, 80%, 83%);
+  --plum-400: hsl(263, 66%, 59%);
+  --plum-100: hsl(263, 56%, 34%);
+  --plum-50: hsl(263, 50%, 20%);
+
+  --danger-900: hsl(0, 90%, 96%);
+  --danger-700: hsl(0, 80%, 83%);
+  --danger-400: hsl(0, 74%, 50%);
+  --danger-100: hsl(0, 78%, 24%);
+  --danger-50: hsl(0, 80%, 14%);
+
+  --warn-900: hsl(36, 100%, 94%);
+  --warn-700: hsl(36, 100%, 86%);
+  --warn-400: hsl(36, 100%, 50%);
+  --warn-100: hsl(36, 90%, 36%);
+  --warn-50: hsl(36, 80%, 26%);
+
+  --grey-900: hsl(200, 5%, 94%);
+  --grey-800: hsl(200, 5%, 86%);
+  --grey-700: hsl(200, 5%, 79%);
+  --grey-500: hsl(200, 5%, 68%);
+  --grey-400: hsl(200, 5%, 56%);
+  --grey-300: hsl(200, 5%, 48%);
+  --grey-200: hsl(200, 5%, 32%);
+  --grey-100: hsl(200, 5%, 24%);
+  --grey-50: hsl(200, 5%, 16%);
+
+  --text-1: hsl(0, 0%, 100%);
+  --text-2: hsl(0, 0%, 70%);
+
+  --bg-1: hsl(210, 6%, 7%);
+
+  --card-bg: var(--grey-50);
+  --dialog-bg: hsl(200, 5%, 12%);
+  --table-bg: var(--grey-100);
+  --table-header-bg: var(--grey-50);
+}
+
+$colors: 'primary', 'secondary', 'royal', 'danger', 'warn', 'plum', 'sea',
+  'grey';
+
+@mixin colored($name) {
+  #{'.' + $name} {
+    background: #{var(-- + $name + -400)} !important;
+    color: var(--white) !important;
+
+    &.light {
+      background: #{var(-- + $name + -50)} !important;
+      color: #{var(-- + $name + -400)} !important;
+    }
+
+    &.bordered {
+      background: var(--bg-1) !important;
+      border: 2px solid #{var(-- + $name + -400)} !important;
+      color: #{var(-- + $name + -400)} !important;
+    }
+  }
+
+  #{'.text-' + $name} {
+    color: #{var(-- + $name + -400)} !important;
+  }
+
+  #{'.gradient-' + $name} {
+    color: #{var(-- + $name + -400)} !important;
+    background: linear-gradient(
+      45deg,
+      #{var(-- + $name + -50)},
+      #{var(-- + $name + -100)}
+    ) !important;
+  }
+
+  html[data-theme='dark'] {
+    #{'.gradient-' + $name} {
+      color: #{var(-- + $name + -700)} !important;
+    }
+
+    #{'.' + $name} {
+      &.light {
+        color: #{var(-- + $name + -700)} !important;
+      }
+    }
+  }
+}
+
+@each $color in $colors {
+  @include colored($color);
+}

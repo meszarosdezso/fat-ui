@@ -1,0 +1,48 @@
+.chip {
+  @include centered;
+  flex-flow: row nowrap;
+  border-radius: var(--radius-full);
+  padding: 0.4rem 1.2rem;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 150ms ease-out;
+  background: var(--grey-100);
+  color: var(--grey-700);
+  cursor: pointer;
+  gap: 0.4rem;
+
+  &.selected {
+    color: var(--grey-50);
+    background: var(--grey-700);
+  }
+
+  &.small {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    padding: 0.3rem 0.7rem;
+  }
+
+  &:active {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+}
+
+@mixin coloredChip($color) {
+  #{'.chip.' + $color} {
+    color: #{var(-- + $color + -400)} !important;
+    background: #{var(-- + $color + -50)} !important;
+
+    &.selected {
+      background: #{var(-- + $color + -400)} !important;
+      color: var(--white) !important;
+    }
+  }
+}
+
+@each $color in $colors {
+  @include coloredChip($color);
+}

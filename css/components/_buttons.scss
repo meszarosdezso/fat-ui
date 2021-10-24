@@ -1,0 +1,62 @@
+button {
+  @include centered;
+  flex-flow: row nowrap;
+  border-radius: var(--radius-default);
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 150ms ease-out;
+  cursor: pointer;
+  background: var(--grey-50);
+  color: var(--grey-800);
+  gap: 0.5rem;
+
+  .button-icon {
+    font-size: 0.9rem;
+  }
+
+  &.icon {
+    height: var(--button-size-default);
+    width: var(--button-size-default);
+  }
+
+  &.wrapped {
+    flex-flow: column nowrap;
+    padding: 0.7rem 1rem;
+  }
+
+  &:active {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+}
+
+@mixin button($color) {
+  #{'button.' + $color} {
+    box-shadow: 0 0.2rem 0.7rem #{var(-- + $color + -100)};
+
+    &.flat {
+      box-shadow: none;
+    }
+
+    &.light {
+      box-shadow: 0 0.1rem 0.4rem #{var(-- + $color + -50)};
+    }
+
+    &.bordered {
+      box-shadow: none;
+    }
+
+    &.disabled {
+      background: #{var(-- + $color + -50)} !important;
+      color: #{var(-- + $color + -100)} !important;
+      box-shadow: none;
+      pointer-events: none;
+    }
+  }
+}
+
+@each $color in $colors {
+  @include button($color);
+}

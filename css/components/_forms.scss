@@ -1,0 +1,137 @@
+.search-bar {
+  padding-left: 0.9rem;
+  border-radius: var(--radius-default);
+  display: flex;
+  align-items: center;
+  background: var(--grey-50);
+  position: relative;
+
+  .search-bar-icon {
+    color: var(--grey-700);
+  }
+
+  .search-results {
+    position: absolute;
+    left: 0%;
+    top: 110%;
+    width: 100%;
+    max-height: 500px;
+  }
+}
+
+input {
+  color: var(--text-1);
+  background: var(--grey-50);
+  border: none;
+  font-size: 0.9rem;
+  padding: 0.7rem 0;
+  min-width: 200px;
+  border-radius: var(--radius-default);
+  padding-left: 0.7rem;
+
+  &::placeholder {
+    color: var(--grey-400);
+    font-weight: 500;
+  }
+}
+
+textarea {
+  border-radius: var(--radius-default);
+  border: none;
+  background: var(--grey-50);
+  padding: 0.5rem;
+  color: var(--text-1);
+  font-size: 1rem;
+}
+
+.checkbox {
+  @include pressable;
+  @include centered;
+
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-default);
+  border: 3px solid currentColor;
+  font-size: 0.9rem;
+
+  &.small {
+    width: 1.2rem;
+    height: 1.2rem;
+    font-size: 0.6rem;
+    border-width: 0.15rem;
+    border-radius: var(--radius-xs);
+
+    .checkbox-icon {
+      transform: translateY(0.05rem);
+    }
+  }
+
+  input[type='checkbox'] {
+    display: none;
+  }
+
+  &-icon {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &.selected {
+    background: currentColor;
+
+    .checkbox-icon {
+      opacity: 1;
+      color: var(--bg-1);
+    }
+  }
+}
+
+.radio {
+  @include pressable;
+  width: 1rem;
+  height: 1rem;
+  border-radius: var(--radius-circle);
+  border: 0.15rem solid currentColor;
+
+  input[type='radio'] {
+    display: none;
+  }
+
+  &.selected {
+    border-width: 0.4rem;
+  }
+}
+
+.select {
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-default);
+  transition: opacity 100ms ease-out;
+  cursor: pointer;
+  background: var(--card-bg);
+
+  .value {
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+
+    .select-icon {
+      margin-left: 1rem;
+    }
+  }
+
+  &.bordered {
+    box-shadow: none;
+
+    .value {
+      font-weight: 600;
+    }
+  }
+
+  select {
+    display: none;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}

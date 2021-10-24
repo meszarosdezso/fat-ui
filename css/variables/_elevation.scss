@@ -1,0 +1,33 @@
+:root {
+  --shadow-1: 0 0.2rem 1rem #0002;
+  --shadow-2: 0 0.5rem 2rem #0001;
+  --shadow-3: 0 0.5rem 3rem #0002;
+}
+
+$elevationMin: 1;
+$elevationMax: 3;
+
+@mixin elevated($elevation) {
+  #{'.elevated-' + $elevation} {
+    box-shadow: #{var(--shadow- + $elevation)} !important;
+  }
+}
+
+@for $elevation from $elevationMin to $elevationMax + 1 {
+  @include elevated($elevation);
+}
+
+@each $color in $colors {
+  #{'.elevated.' + $color} {
+    box-shadow: 0 0.4rem 1.5rem #{var(-- + $color + -100)};
+  }
+  #{'.elevated-light.' + $color} {
+    box-shadow: 0 0.4rem 1.5rem #{var(-- + $color + -50)};
+  }
+
+  html[data-theme='dark'] {
+    #{'.elevated-light.' + $color} {
+      box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@mixin centered {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.centered {
+  @include centered;
+}
+
+.center-h {
+  margin: auto;
+}
+
+@mixin row($wrap: false) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @if $wrap {
+    flex-wrap: wrap;
+  }
+
+  @if not $wrap {
+    flex-wrap: nowrap;
+  }
+}
+
+.row {
+  @include row();
+}
+
+@mixin auto-grid($n) {
+  display: grid;
+  grid-template-columns: repeat($n, auto);
+}

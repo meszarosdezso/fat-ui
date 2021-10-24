@@ -1,0 +1,40 @@
+.dialog {
+  box-shadow: var(--shadow-3);
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: var(--radius-xl);
+  width: 90%;
+  max-width: 800px;
+  position: relative;
+  background: var(--dialog-bg);
+
+  .dialog-icon {
+    @include centered;
+
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: var(--radius-circle);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    border: 4px solid var(--dialog-bg);
+  }
+
+  .dialog-title {
+    color: var(--text-1);
+    font-weight: 500;
+    font-size: 1.7rem;
+    margin-top: 2rem;
+  }
+
+  .dialog-body {
+    margin: 3rem auto;
+  }
+
+  .dialog-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+}

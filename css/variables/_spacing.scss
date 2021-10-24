@@ -1,0 +1,46 @@
+@use 'sass:math';
+@use 'sass:string';
+
+$max: 10;
+$offset: 1;
+$unit: 'rem';
+
+$sides: 'top', 'bottom', 'left', 'right';
+
+@mixin spacing($classSuffix, $amount) {
+  @each $side in $sides {
+    $suffix: string.slice($side, 1, 1);
+    #{'.p' + $suffix + '-' + $classSuffix} {
+      #{"padding-" + $side}: #{$amount + $unit} !important;
+    }
+    #{'.m' + $suffix + '-' + $classSuffix} {
+      #{"margin-" + $side}: #{$amount + $unit} !important;
+    }
+  }
+
+  #{'.px-' + $classSuffix} {
+    padding-left: #{$amount + $unit} !important;
+    padding-right: #{$amount + $unit} !important;
+  }
+
+  #{'.py-' + $classSuffix} {
+    padding-top: #{$amount + $unit} !important;
+    padding-bottom: #{$amount + $unit} !important;
+  }
+
+  #{'.mx-' + $classSuffix} {
+    margin-left: #{$amount + $unit} !important;
+    margin-right: #{$amount + $unit} !important;
+  }
+
+  #{'.my-' + $classSuffix} {
+    margin-top: #{$amount + $unit} !important;
+    margin-bottom: #{$amount + $unit} !important;
+  }
+}
+
+@for $n from 0 to $max {
+  @include spacing($n, math.div($n, 2));
+}
+
+@include spacing('xs', 0.25);

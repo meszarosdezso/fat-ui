@@ -1,0 +1,41 @@
+.table-wrapper {
+  border-radius: var(--radius-default);
+  background: var(--table-bg);
+  overflow-x: scroll;
+  box-shadow: var(--shadow-2);
+
+  table {
+    min-width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+
+    thead,
+    tfoot {
+      background: var(--table-header-bg);
+      font-size: 0.9rem;
+
+      th {
+        font-weight: 600;
+        color: var(--grey-700);
+      }
+    }
+
+    tr {
+      @include transitionAll(100ms);
+
+      &:hover {
+        background: var(--table-header-bg);
+      }
+    }
+
+    td,
+    th {
+      padding: 0.7rem;
+
+      &:last-child {
+        text-align: right;
+        padding-right: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.banner {
+  @include card;
+  width: 90%;
+  max-width: 600px;
+
+  .banner-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  .banner-body {
+    margin-top: 1rem;
+  }
+}

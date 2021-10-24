@@ -1,0 +1,32 @@
+@import './variables/animations';
+@import './variables/colors';
+@import './variables/elevation';
+@import './variables/radius';
+@import './variables/size';
+@import './variables/spacing';
+@import './variables/typography';
+
+@import './utils/position';
+
+@import './components/cards';
+@import './components/banners';
+@import './components/buttons';
+@import './components/chips';
+@import './components/dialogs';
+@import './components/forms';
+@import './components/shapes';
+@import './components/lists';
+@import './components/pagination';
+@import './components/popover';
+@import './components/tables';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-1);
+  color: var(--text-1);
+}
