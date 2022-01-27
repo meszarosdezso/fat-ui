@@ -2,40 +2,41 @@
 @use 'sass:string';
 
 $max: 10;
-$offset: 1;
 $unit: 'rem';
 
 $sides: 'top', 'bottom', 'left', 'right';
 
 @mixin spacing($classSuffix, $amount) {
+  $value: #{$amount + $unit};
+
   @each $side in $sides {
     $suffix: string.slice($side, 1, 1);
     #{'.p' + $suffix + '-' + $classSuffix} {
-      #{"padding-" + $side}: #{$amount + $unit} !important;
+      #{"padding-" + $side}: $value !important;
     }
     #{'.m' + $suffix + '-' + $classSuffix} {
-      #{"margin-" + $side}: #{$amount + $unit} !important;
+      #{"margin-" + $side}: $value !important;
     }
   }
 
   #{'.px-' + $classSuffix} {
-    padding-left: #{$amount + $unit} !important;
-    padding-right: #{$amount + $unit} !important;
+    padding-left: $value !important;
+    padding-right: $value !important;
   }
 
   #{'.py-' + $classSuffix} {
-    padding-top: #{$amount + $unit} !important;
-    padding-bottom: #{$amount + $unit} !important;
+    padding-top: $value !important;
+    padding-bottom: $value !important;
   }
 
   #{'.mx-' + $classSuffix} {
-    margin-left: #{$amount + $unit} !important;
-    margin-right: #{$amount + $unit} !important;
+    margin-left: $value !important;
+    margin-right: $value !important;
   }
 
   #{'.my-' + $classSuffix} {
-    margin-top: #{$amount + $unit} !important;
-    margin-bottom: #{$amount + $unit} !important;
+    margin-top: $value !important;
+    margin-bottom: $value !important;
   }
 }
 
