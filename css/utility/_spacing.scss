@@ -2,11 +2,10 @@
 @use 'sass:string';
 
 $max: 10;
-$unit: 'rem';
 
 $sides: 'top', 'bottom', 'left', 'right';
 
-@mixin spacing($classSuffix, $amount) {
+@mixin spacing($classSuffix, $amount, $unit: 'em') {
   $value: #{$amount + $unit};
 
   @each $side in $sides {
@@ -45,5 +44,8 @@ $sides: 'top', 'bottom', 'left', 'right';
 }
 
 @for $n from 0 to $max {
-  @include spacing($n, math.div($n, 2));
+  @include spacing($n, math.div($n, 2), 'rem');
 }
+
+@include spacing('xs', 0.25, 'rem');
+@include spacing('auto', auto, '');

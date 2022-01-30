@@ -4,3 +4,11 @@
   --circle-size-md: 2.35rem;
   --circle-size-sm: 2rem;
 }
+
+@mixin full-width {
+  width: 100%;
+}
+
+.wide {
+  @include full-width;
+}

@@ -25,11 +25,11 @@ export default function Article() {
         <title>Article | Fat UI</title>
       </Head>
       <div
-        style={{ position: 'absolute', zIndex: 2, width: '100%' }}
-        className="row end py-2 px-2"
+        style={{ position: 'absolute', zIndex: 2 }}
+        className="row end py-2 px-2 wide"
       >
         <Link href="/">
-          <div style={{ marginRight: 'auto' }} className="row">
+          <div className="mr-auto row">
             <button
               className="icon mr-auto"
               onClick={() => {
@@ -38,7 +38,6 @@ export default function Article() {
             >
               <FontAwesomeIcon icon={faHome} />
             </button>
-            <h3 className="ml-2 mb-0">Fat UI</h3>
           </div>
         </Link>
 
