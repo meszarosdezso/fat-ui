@@ -8,7 +8,8 @@ article {
     header {
       margin-bottom: 10vh;
       .author,
-      .meta {
+      .meta,
+      .tags {
         justify-content: center;
       }
 
@@ -69,6 +70,7 @@ article {
       font-weight: 700;
       line-height: 1.3em;
       margin: 0.65em auto;
+      margin-bottom: 0.3em;
     }
 
     h2 {
@@ -81,8 +83,15 @@ article {
       @include row;
       @include gap(1.5);
       color: var(--grey-700);
-      margin-bottom: 1.5em;
       font-size: 0.9em;
+      margin-bottom: 1em;
+    }
+
+    .tags {
+      @include row;
+      @include gap(1);
+      font-size: 0.8rem;
+      margin-bottom: 1.5em;
     }
 
     .cover {

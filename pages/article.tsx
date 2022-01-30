@@ -4,6 +4,7 @@ import {
   faClock,
   faHome,
   faImage,
+  faTags,
   faUserAlt,
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -13,11 +14,30 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Footer from '../components/Footer'
 
+const article = {
+  author: {
+    image_url: 'https://github.com/meszarosdezso.png',
+    name: 'Dezso Meszaros',
+  },
+  meta: {
+    read_mins: 2,
+    updated_at: new Date(),
+    tags: ['article', 'fat ui', 'typography'],
+  },
+  cover: {
+    url: 'https://meszarosdezso.com/assets/instagram_6.jpg',
+    alt: 'Somewhere',
+  },
+  title: 'This page showcases how an article looks like',
+  subtitle: 'It can also have subtitles and a cover photo!',
+}
+
 export default function Article() {
   const [centered, setCentered] = useState(false)
   const [displayTitle, setDisplayTitle] = useState(false)
   const [showAuthor, setShowAuthor] = useState(true)
   const [showCover, setShowCover] = useState(true)
+  const [showTags, setShowTags] = useState(true)
 
   return (
     <div className="article-page">
@@ -85,6 +105,19 @@ export default function Article() {
             icon={faImage}
           />
         </button>
+        <button
+          className="icon ml-1"
+          onClick={() => {
+            setShowTags(!showTags)
+          }}
+        >
+          <FontAwesomeIcon
+            style={{
+              opacity: showTags ? 1 : 0.2,
+            }}
+            icon={faTags}
+          />
+        </button>
       </div>
 
       <article className={centered ? 'centered' : ''}>
@@ -93,9 +126,12 @@ export default function Article() {
             <a href="/">
               <div className="author">
                 <div className="image">
-                  <img src="https://github.com/meszarosdezso.png" alt="" />
+                  <img
+                    src={article.author.image_url}
+                    alt={article.author.name}
+                  />
                 </div>
-                <span className="name">Dezso Meszaros</span>
+                <span className="name">{article.author.name}</span>
               </div>
             </a>
           )}
@@ -103,25 +139,35 @@ export default function Article() {
           <div className="meta">
             <span>
               Last updated{' '}
-              {new Date().toISOString().substring(0, 10).replace(/-/g, '. ')}.
+              {article.meta.updated_at
+                .toISOString()
+                .substring(0, 10)
+                .replace(/-/g, '. ')}
+              .
             </span>
             <span>
-              <FontAwesomeIcon className="mr-1" icon={faClock} />2 mins
+              <FontAwesomeIcon className="mr-1" icon={faClock} />
+              {article.meta.read_mins} mins
             </span>
           </div>
 
-          <h1 className={displayTitle ? 'display' : ''}>
-            This page showcases how an article looks like
-          </h1>
+          <h1 className={displayTitle ? 'display' : ''}>{article.title}</h1>
 
-          <h2>It can also have subtitles and a cover photo!</h2>
+          {showTags && (
+            <div className="tags">
+              {article.meta.tags.map(tag => (
+                <a key={tag} className="tag">
+                  <div className="chip small royal light">{tag}</div>
+                </a>
+              ))}
+            </div>
+          )}
+
+          <h2>{article.subtitle}</h2>
 
           {showCover && (
             <div className="cover">
-              <img
-                src="https://meszarosdezso.com/assets/instagram_6.jpg"
-                alt="Article Cover"
-              />
+              <img src={article.cover.url} alt={article.cover.alt} />
             </div>
           )}
         </header>
