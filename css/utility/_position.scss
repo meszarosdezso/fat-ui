@@ -41,7 +41,7 @@
 }
 
 @mixin gap($gap: 1) {
-  gap: #{$gap + 'rem'};
+  gap: #{$gap + 'em'};
 }
 
 @mixin auto-grid($n) {
