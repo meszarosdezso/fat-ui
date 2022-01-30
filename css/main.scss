@@ -5,9 +5,10 @@
 @import './variables/size';
 @import './variables/typography';
 
-@import './utility/spacing';
 @import './utility/position';
+@import './utility/spacing';
 
+@import './components/article';
 @import './components/cards';
 @import './components/banners';
 @import './components/buttons';

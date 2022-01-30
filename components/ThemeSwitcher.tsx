@@ -1,8 +1,19 @@
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useEffect, useMemo, useState } from 'react'
+import {
+  ButtonHTMLAttributes,
+  DetailedHTMLProps,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react'
 
-export default function ThemeSwitcher() {
+export default function ThemeSwitcher(
+  props: DetailedHTMLProps<
+    ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  >
+) {
   const theme = useMemo(() => {
     if (typeof window !== 'undefined') {
       return localStorage.getItem('fat-design-theme') || 'light'
@@ -23,11 +34,12 @@ export default function ThemeSwitcher() {
   }
 
   return (
-    <FontAwesomeIcon
+    <button
+      {...props}
       onClick={changeLight}
-      style={{ marginBottom: '1rem' }}
-      size="2x"
-      icon={light ? faSun : faMoon}
-    />
+      className={`${props.className} icon`}
+    >
+      <FontAwesomeIcon size="1x" icon={light ? faSun : faMoon} />
+    </button>
   )
 }

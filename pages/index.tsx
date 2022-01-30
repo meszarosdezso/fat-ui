@@ -7,6 +7,7 @@ import Chips from '../components/Chips'
 import Colors from '../components/Colors'
 import Components from '../components/Components'
 import Dialogs from '../components/Dialogs'
+import Footer from '../components/Footer'
 import FormElements from '../components/FormElements'
 import Lists from '../components/Lists'
 import Tables from '../components/Tables'
@@ -15,30 +16,31 @@ import Typography from '../components/Typography'
 
 export default function Home() {
   return (
-    <div id={'Home'}>
+    <div>
       <Head>
         <title>Fat UI</title>
       </Head>
-      <ThemeSwitcher />
+      <div id={'Home'}>
+        <ThemeSwitcher className="mb-2" />
 
-      <h1>
-        <span className="title text-primary">Fat </span>
-        Design
-      </h1>
+        <h1>
+          <span className="title text-primary">Fat </span>
+          Design
+        </h1>
 
-      <Typography />
-      <Colors />
-      <Buttons />
-      <Chips />
-      <Cards />
-      <FormElements />
-      <Lists />
-      <Tables />
-      <Banners />
-      <Dialogs />
-      <Components />
-
-      <div id="copyright">2021 © meszarosdezso</div>
+        <Typography />
+        <Colors />
+        <Buttons />
+        <Chips />
+        <Cards />
+        <FormElements />
+        <Lists />
+        <Tables />
+        <Banners />
+        <Dialogs />
+        <Components />
+      </div>
+      <Footer />
     </div>
   )
 }

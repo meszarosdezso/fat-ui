@@ -8,6 +8,10 @@
 
 .centered {
   @include centered;
+
+  .row {
+    justify-content: center;
+  }
 }
 
 .center-h {
@@ -30,6 +34,14 @@
 
 .row {
   @include row();
+
+  &.end {
+    justify-content: flex-end;
+  }
+}
+
+@mixin gap($gap: 1) {
+  gap: #{$gap + 'rem'};
 }
 
 @mixin auto-grid($n) {

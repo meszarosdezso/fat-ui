@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Typography() {
   return (
     <section id="typography">
@@ -19,18 +21,9 @@ export default function Typography() {
         <p>For code snippets.</p>
       </div>
 
-      <h4>Block of text</h4>
+      <h4>Articles (blocks of text)</h4>
 
-      <p>
-        Quand sur la plage <br />
-        Tous les plaisirs de l'été <br />
-        Avec leurs joies <br />
-        Venaient à moi <br />
-        De tous côtés <br />
-        L'amour offrait l'éternité <br />
-        À cette image <br />
-        De la plage ensoleillée.
-      </p>
+      <Link href="/article">Link to an article</Link>
     </section>
   )
 }

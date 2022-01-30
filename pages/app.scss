@@ -1,5 +1,6 @@
 #Home {
   padding: 4rem;
+  padding-bottom: 6rem;
 
   section {
     margin: 3rem 0;
@@ -62,9 +63,12 @@
       margin-bottom: 2rem;
     }
   }
+}
 
-  #copyright {
-    opacity: 0.4;
-    margin-top: 10rem;
-  }
+footer {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  opacity: 0.4;
+  text-align: center;
 }

@@ -38,10 +38,12 @@ $sides: 'top', 'bottom', 'left', 'right';
     margin-top: $value !important;
     margin-bottom: $value !important;
   }
+
+  #{'.gap-' + $classSuffix} {
+    @include gap($value);
+  }
 }
 
 @for $n from 0 to $max {
   @include spacing($n, math.div($n, 2));
 }
-
-@include spacing('xs', 0.25);
