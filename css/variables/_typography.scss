@@ -61,6 +61,26 @@ strong {
   font-weight: 600;
 }
 
+figure {
+  width: max-content;
+  margin: 2rem 0;
+}
+
+blockquote {
+  border-left: 0.2em solid currentColor;
+  padding-left: 1em;
+  p {
+    margin-bottom: 1em !important;
+  }
+}
+
+figcaption {
+  font-style: italic;
+  text-align: right;
+  font-weight: 500;
+  color: var(--grey-300);
+}
+
 .title {
   line-height: 1.3;
   margin-bottom: 0.7rem;

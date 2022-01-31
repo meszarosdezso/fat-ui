@@ -249,6 +249,20 @@ export default function Article() {
             </tbody>
           </table>
 
+          <h2>Quotes are also nice</h2>
+
+          <figure className="text-primary">
+            <blockquote>
+              <p>
+                In order to understand recursion, <br />
+                One must first understand recursion.
+              </p>
+            </blockquote>
+            <figcaption>— Unknown</figcaption>
+          </figure>
+
+          <blockquote></blockquote>
+
           <h2>Images</h2>
 
           <p>They will not be bigger than the article's width.</p>
