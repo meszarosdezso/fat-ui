@@ -115,7 +115,8 @@ article {
     @include full-width;
     position: relative;
 
-    img {
+    img,
+    figure {
       max-width: 100%;
     }
 
