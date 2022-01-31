@@ -210,7 +210,15 @@ export default function Article() {
             <ul>
               <li>Lists inside lists are also padded</li>
               <ul>
-                <li>I can go way deeper</li>
+                <li>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.youtube.com/watch?v=kD_xWrhZ8yI"
+                  >
+                    I can go way deeper
+                  </a>
+                </li>
               </ul>
             </ul>
           </ul>
