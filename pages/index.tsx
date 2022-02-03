@@ -1,18 +1,18 @@
-import Head from 'next/head'
-import React from 'react'
-import Banners from '../components/Banners'
-import Buttons from '../components/Buttons'
-import Cards from '../components/Cards'
-import Chips from '../components/Chips'
-import Colors from '../components/Colors'
-import Components from '../components/Components'
-import Dialogs from '../components/Dialogs'
-import Footer from '../components/Footer'
-import FormElements from '../components/FormElements'
-import Lists from '../components/Lists'
-import Tables from '../components/Tables'
-import ThemeSwitcher from '../components/ThemeSwitcher'
-import Typography from '../components/Typography'
+import Head from "next/head"
+import React from "react"
+import Banners from "../components/Banners"
+import Buttons from "../components/Buttons"
+import Cards from "../components/Cards"
+import Chips from "../components/Chips"
+import Colors from "../components/Colors"
+import Components from "../components/Components"
+import Dialogs from "../components/Dialogs"
+import Footer from "../components/Footer"
+import FormElements from "../components/FormElements"
+import Lists from "../components/Lists"
+import Tables from "../components/Tables"
+import ThemeSwitcher from "../components/ThemeSwitcher"
+import Typography from "../components/Typography"
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
       <Head>
         <title>Fat UI</title>
       </Head>
-      <div id={'Home'}>
+      <div id={"Home"}>
         <ThemeSwitcher className="mb-2" />
 
         <h1>

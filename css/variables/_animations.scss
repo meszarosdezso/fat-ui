@@ -30,8 +30,8 @@ $animationDurationMax: 2000 + $animationDurationStep;
 
 $i: $animationDurationMin;
 @while $i < $animationDurationMax {
-  #{'.fade-in-' + $i} {
-    animation: #{'fadeIn ' + $i + 'ms ease-out forwards'};
+  #{".fade-in-" + $i} {
+    animation: #{"fadeIn " + $i + "ms ease-out forwards"};
   }
 
   $i: $i + $animationDurationStep;
@@ -43,8 +43,8 @@ $animationDelayMax: 500 + $animationDelayStep;
 
 $i: $animationDelayMin;
 @while $i < $animationDelayMax {
-  #{'.delay-' + $i} {
-    animation-delay: #{$i + 'ms'};
+  #{".delay-" + $i} {
+    animation-delay: #{$i + "ms"};
   }
 
   $i: $i + $animationDelayStep;

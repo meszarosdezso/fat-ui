@@ -2,9 +2,9 @@ import {
   faHamburger,
   faPizzaSlice,
   faPlus,
-} from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useAccent } from '../utils/theme'
+} from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useAccent } from "../utils/theme"
 
 export default function Buttons() {
   const accent = useAccent()

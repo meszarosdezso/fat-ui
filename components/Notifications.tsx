@@ -3,29 +3,29 @@ import {
   faExclamationTriangle,
   faExternalLinkAlt,
   faPizzaSlice,
-} from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+} from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const notis = [
   {
-    time: '14:57',
+    time: "14:57",
     icon: faPizzaSlice,
-    type: 'royal',
-    title: 'New! Realtime communication between users!',
+    type: "royal",
+    title: "New! Realtime communication between users!",
     body: `Users are now notified about each others activity without refreshing the page.`,
-    link: 'a1b',
+    link: "a1b",
   },
   {
-    time: '01:08',
+    time: "01:08",
     icon: faCheck,
-    type: 'sea',
-    title: 'Everything operates normally.',
+    type: "sea",
+    title: "Everything operates normally.",
   },
   {
-    time: 'Yesterday, 18:13',
+    time: "Yesterday, 18:13",
     icon: faExclamationTriangle,
-    type: 'warn',
-    title: 'Database maintenance',
+    type: "warn",
+    title: "Database maintenance",
     body: `We are making changes to our database this evening around 1am. Saving and loading data might be slower than usual.`,
   } as const,
 ]
@@ -35,7 +35,7 @@ export default function Notifications() {
     <section id="notifications">
       <h3>Notifications</h3>
 
-      <ul style={{ maxWidth: '540px' }} className="list elevated-3">
+      <ul style={{ maxWidth: "540px" }} className="list elevated-3">
         <h2 className="pl-2 mb-0 mt-3 fw-400">Notifications</h2>
         {notis.map(noti => (
           <li
@@ -60,9 +60,9 @@ export default function Notifications() {
                   Learn more
                   <FontAwesomeIcon
                     className="ml-1 external-icon"
-                    size={'xs'}
+                    size={"xs"}
                     icon={faExternalLinkAlt}
-                  />{' '}
+                  />{" "}
                 </a>
               ) : null}
             </div>

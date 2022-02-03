@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from "react"
 
 export default function Pagination() {
   const [state, setState] = useState(0)
@@ -18,7 +18,7 @@ export default function Pagination() {
             .map((_, i) => (
               <a key={i} onClick={() => setState(i)}>
                 <div
-                  className={`pagination-page ${i === state ? 'active' : ''}`}
+                  className={`pagination-page ${i === state ? "active" : ""}`}
                 >
                   {String.fromCharCode(i + 65)}
                 </div>
@@ -38,7 +38,7 @@ export default function Pagination() {
             .map((_, i) => (
               <a key={i} onClick={() => setState(i)}>
                 <div
-                  className={`pagination-page ${i === state ? 'active' : ''}`}
+                  className={`pagination-page ${i === state ? "active" : ""}`}
                 >
                   {i + 1}
                 </div>
@@ -56,7 +56,7 @@ export default function Pagination() {
               <a key={i + 42} onClick={() => setState(i + 42)}>
                 <div
                   className={`pagination-page ${
-                    state === i + 42 ? 'active' : ''
+                    state === i + 42 ? "active" : ""
                   }`}
                 >
                   {i + 42}

@@ -1,51 +1,51 @@
-@use 'sass:math';
-@use 'sass:string';
+@use "sass:math";
+@use "sass:string";
 
 $max: 10;
 
-$sides: 'top', 'bottom', 'left', 'right';
+$sides: "top", "bottom", "left", "right";
 
-@mixin spacing($classSuffix, $amount, $unit: 'em') {
+@mixin spacing($classSuffix, $amount, $unit: "em") {
   $value: #{$amount + $unit};
 
   @each $side in $sides {
     $suffix: string.slice($side, 1, 1);
-    #{'.p' + $suffix + '-' + $classSuffix} {
+    #{".p" + $suffix + "-" + $classSuffix} {
       #{"padding-" + $side}: $value !important;
     }
-    #{'.m' + $suffix + '-' + $classSuffix} {
+    #{".m" + $suffix + "-" + $classSuffix} {
       #{"margin-" + $side}: $value !important;
     }
   }
 
-  #{'.px-' + $classSuffix} {
+  #{".px-" + $classSuffix} {
     padding-left: $value !important;
     padding-right: $value !important;
   }
 
-  #{'.py-' + $classSuffix} {
+  #{".py-" + $classSuffix} {
     padding-top: $value !important;
     padding-bottom: $value !important;
   }
 
-  #{'.mx-' + $classSuffix} {
+  #{".mx-" + $classSuffix} {
     margin-left: $value !important;
     margin-right: $value !important;
   }
 
-  #{'.my-' + $classSuffix} {
+  #{".my-" + $classSuffix} {
     margin-top: $value !important;
     margin-bottom: $value !important;
   }
 
-  #{'.gap-' + $classSuffix} {
+  #{".gap-" + $classSuffix} {
     @include gap($value);
   }
 }
 
 @for $n from 0 to $max {
-  @include spacing($n, math.div($n, 2), 'rem');
+  @include spacing($n, math.div($n, 2), "rem");
 }
 
-@include spacing('xs', 0.25, 'rem');
-@include spacing('auto', auto, '');
+@include spacing("xs", 0.25, "rem");
+@include spacing("auto", auto, "");

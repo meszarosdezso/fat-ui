@@ -33,7 +33,7 @@ button {
 }
 
 @mixin button($color) {
-  #{'button.' + $color} {
+  #{"button." + $color} {
     box-shadow: 0 0.2rem 0.7rem #{var(-- + $color + -100)};
 
     &.flat {

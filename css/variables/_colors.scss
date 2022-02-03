@@ -65,7 +65,7 @@
   --table-header-bg: var(--grey-50);
 }
 
-:root[data-theme='dark'] {
+:root[data-theme="dark"] {
   --primary-900: hsl(25, 100%, 96%);
   --primary-700: hsl(25, 100%, 83%);
   --primary-400: hsl(25, 91%, 54%);
@@ -128,11 +128,11 @@
   --table-header-bg: var(--grey-50);
 }
 
-$colors: 'primary', 'secondary', 'royal', 'danger', 'warn', 'plum', 'sea',
-  'grey';
+$colors: "primary", "secondary", "royal", "danger", "warn", "plum", "sea",
+  "grey";
 
 @mixin colored($name) {
-  #{'.' + $name} {
+  #{"." + $name} {
     background: #{var(-- + $name + -400)} !important;
     color: var(--white) !important;
 
@@ -148,11 +148,11 @@ $colors: 'primary', 'secondary', 'royal', 'danger', 'warn', 'plum', 'sea',
     }
   }
 
-  #{'.text-' + $name} {
+  #{".text-" + $name} {
     color: #{var(-- + $name + -400)} !important;
   }
 
-  #{'.gradient-' + $name} {
+  #{".gradient-" + $name} {
     color: #{var(-- + $name + -400)} !important;
     background: linear-gradient(
       45deg,
@@ -161,12 +161,12 @@ $colors: 'primary', 'secondary', 'royal', 'danger', 'warn', 'plum', 'sea',
     ) !important;
   }
 
-  html[data-theme='dark'] {
-    #{'.gradient-' + $name} {
+  html[data-theme="dark"] {
+    #{".gradient-" + $name} {
       color: #{var(-- + $name + -700)} !important;
     }
 
-    #{'.' + $name} {
+    #{"." + $name} {
       &.light {
         color: #{var(-- + $name + -700)} !important;
       }

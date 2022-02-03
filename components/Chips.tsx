@@ -1,6 +1,6 @@
-import { faCheck } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useAccent } from '../utils/theme'
+import { faCheck } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useAccent } from "../utils/theme"
 
 export default function Chips() {
   const accent = useAccent()

@@ -32,7 +32,7 @@
 }
 
 @mixin coloredChip($color) {
-  #{'.chip.' + $color} {
+  #{".chip." + $color} {
     color: #{var(-- + $color + -400)} !important;
     background: #{var(-- + $color + -50)} !important;
 

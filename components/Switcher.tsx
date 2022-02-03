@@ -1,6 +1,6 @@
 export default function Switcher() {
   return (
-    <div style={{ maxWidth: '500px' }}>
+    <div style={{ maxWidth: "500px" }}>
       <br />
       <br />
       <h3>Switcher</h3>

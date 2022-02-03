@@ -5,11 +5,11 @@ import {
   faHome,
   faMusic,
   faTree,
-} from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Notifications from './Notifications'
-import Pagination from './Pagination'
-import Switcher from './Switcher'
+} from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Notifications from "./Notifications"
+import Pagination from "./Pagination"
+import Switcher from "./Switcher"
 
 export default function Components() {
   return (

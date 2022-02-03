@@ -8,7 +8,7 @@ $elevationMin: 1;
 $elevationMax: 3;
 
 @mixin elevated($elevation) {
-  #{'.elevated-' + $elevation} {
+  #{".elevated-" + $elevation} {
     box-shadow: #{var(--shadow- + $elevation)} !important;
   }
 }
@@ -18,15 +18,15 @@ $elevationMax: 3;
 }
 
 @each $color in $colors {
-  #{'.elevated.' + $color} {
+  #{".elevated." + $color} {
     box-shadow: 0 0.4rem 1.5rem #{var(-- + $color + -100)};
   }
-  #{'.elevated-light.' + $color} {
+  #{".elevated-light." + $color} {
     box-shadow: 0 0.4rem 1.5rem #{var(-- + $color + -50)};
   }
 
-  html[data-theme='dark'] {
-    #{'.elevated-light.' + $color} {
+  html[data-theme="dark"] {
+    #{".elevated-light." + $color} {
       box-shadow: none;
     }
   }

@@ -2,8 +2,8 @@ import {
   faExclamationTriangle,
   faMoneyCheck,
   faUndoAlt,
-} from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+} from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default function Dialogs() {
   return (

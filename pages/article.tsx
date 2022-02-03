@@ -6,30 +6,30 @@ import {
   faImage,
   faTags,
   faUserAlt,
-} from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useState } from 'react'
-import ThemeSwitcher from '../components/ThemeSwitcher'
-import Link from 'next/link'
-import Head from 'next/head'
-import Footer from '../components/Footer'
+} from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useState } from "react"
+import ThemeSwitcher from "../components/ThemeSwitcher"
+import Link from "next/link"
+import Head from "next/head"
+import Footer from "../components/Footer"
 
 const article = {
   author: {
-    image_url: 'https://github.com/meszarosdezso.png',
-    name: 'Dezso Meszaros',
+    image_url: "https://github.com/meszarosdezso.png",
+    name: "Dezso Meszaros",
   },
   meta: {
     read_mins: 2,
     updated_at: new Date(),
-    tags: ['article', 'fat ui', 'typography'],
+    tags: ["article", "fat ui", "typography"],
   },
   cover: {
-    url: 'https://meszarosdezso.com/assets/instagram_6.jpg',
-    alt: 'Somewhere',
+    url: "https://meszarosdezso.com/assets/instagram_6.jpg",
+    alt: "Somewhere",
   },
-  title: 'This page showcases how an article looks like',
-  subtitle: 'It can also have subtitles and a cover photo!',
+  title: "This page showcases how an article looks like",
+  subtitle: "It can also have subtitles and a cover photo!",
 }
 
 export default function Article() {
@@ -45,7 +45,7 @@ export default function Article() {
         <title>Article | Fat UI</title>
       </Head>
       <div
-        style={{ position: 'absolute', zIndex: 2 }}
+        style={{ position: "absolute", zIndex: 2 }}
         className="row end py-2 px-2 wide"
       >
         <Link href="/">
@@ -69,7 +69,7 @@ export default function Article() {
             setDisplayTitle(!displayTitle)
           }}
         >
-          <span className={displayTitle ? 'display' : ''}>Ab</span>
+          <span className={displayTitle ? "display" : ""}>Ab</span>
         </button>
         <button
           className="icon ml-1"
@@ -120,7 +120,7 @@ export default function Article() {
         </button>
       </div>
 
-      <article className={centered ? 'centered' : ''}>
+      <article className={centered ? "centered" : ""}>
         <header>
           {showAuthor && (
             <a href="/">
@@ -138,11 +138,11 @@ export default function Article() {
 
           <div className="meta">
             <span>
-              Last updated{' '}
+              Last updated{" "}
               {article.meta.updated_at
                 .toISOString()
                 .substring(0, 10)
-                .replace(/-/g, '. ')}
+                .replace(/-/g, ". ")}
               .
             </span>
             <span>
@@ -151,7 +151,7 @@ export default function Article() {
             </span>
           </div>
 
-          <h1 className={displayTitle ? 'display' : ''}>{article.title}</h1>
+          <h1 className={displayTitle ? "display" : ""}>{article.title}</h1>
 
           {showTags && (
             <div className="tags">
@@ -184,7 +184,7 @@ export default function Article() {
 
           <p>
             You can also <em>emphasize</em> or <strong>highlight</strong> some
-            parts. Links have a nice <a href="">light color</a> and they can be{' '}
+            parts. Links have a nice <a href="">light color</a> and they can be{" "}
             <a href="" className="underline">
               underlined
             </a>

@@ -1,12 +1,12 @@
-import { Color, colors } from '../lib/colors'
+import { Color, colors } from "../lib/colors"
 import {
   AnimationControls,
   motion,
   useAnimation,
   Variants,
-} from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
-import { MutableRefObject, useEffect } from 'react'
+} from "framer-motion"
+import { useInView } from "react-intersection-observer"
+import { useEffect } from "react"
 
 const ColorGroup = ({
   color,
@@ -44,7 +44,7 @@ const ColorGroup = ({
         initial="from"
         animate={animationControls}
         variants={colorGroupVariants}
-        className={'color-dots'}
+        className={"color-dots"}
       >
         {color.shades.map(shade => (
           <motion.div
@@ -64,7 +64,7 @@ export default function Colors() {
   const { ref, inView } = useInView()
 
   useEffect(() => {
-    if (inView) controls.start('to')
+    if (inView) controls.start("to")
   }, [controls, inView])
 
   return (
@@ -72,11 +72,10 @@ export default function Colors() {
       <h2>Colors</h2>
 
       <p>
-        <strong>Click on a color to set it as accent color! </strong>
-        (Or use the{' '}
+        <strong>Click on a color to set it as accent color!</strong> (Or use the{" "}
         <code>
           <strong>?accent=</strong>&lt;color&gt;
-        </code>{' '}
+        </code>{" "}
         URL parameter)
       </p>
 
