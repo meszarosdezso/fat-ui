@@ -5,7 +5,7 @@ export default function Typography() {
     <section id="typography">
       <h2>Typography</h2>
       <div className="fontface">
-        <h1 className="title mb-0">Abril Fatface Display</h1>
+        <h1 className="title mb-0 display">Abril Fatface Display</h1>
         <p>For displaying titles, CTAs, and big prices.</p>
       </div>
 
