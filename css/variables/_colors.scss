@@ -54,10 +54,10 @@
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
 
-  --text-1: hsl(0, 0%, 0%);
+  --text: hsl(0, 0%, 0%);
   --text-link: var(--primary-400);
 
-  --bg-1: hsl(0, 0%, 100%);
+  --bg: hsl(0, 0%, 100%);
 
   --card-bg: var(--white);
   --dialog-bg: var(--white);
@@ -118,9 +118,9 @@
   --grey-100: hsl(200, 8%, 24%);
   --grey-50: hsl(200, 8%, 16%);
 
-  --text-1: hsl(0, 0%, 100%);
+  --text: hsl(0, 0%, 100%);
 
-  --bg-1: hsl(210, 6%, 7%);
+  --bg: hsl(210, 6%, 7%);
 
   --card-bg: var(--grey-50);
   --dialog-bg: hsl(200, 5%, 12%);
@@ -142,7 +142,7 @@ $colors: "primary", "secondary", "royal", "danger", "warn", "plum", "sea",
     }
 
     &.bordered {
-      background: var(--bg-1) !important;
+      background: var(--bg) !important;
       border: 2px solid #{var(-- + $name + -400)} !important;
       color: #{var(-- + $name + -400)} !important;
     }
