@@ -9,6 +9,7 @@ import Components from "../components/Components"
 import Dialogs from "../components/Dialogs"
 import Footer from "../components/Footer"
 import FormElements from "../components/FormElements"
+import Header from "../components/Header"
 import Lists from "../components/Lists"
 import Tables from "../components/Tables"
 import ThemeSwitcher from "../components/ThemeSwitcher"
@@ -21,11 +22,13 @@ export default function Home() {
         <title>Fat UI</title>
       </Head>
       <div id={"Home"}>
-        <ThemeSwitcher className="mb-2" />
+        <Header fixed>
+          <ThemeSwitcher />
+        </Header>
 
         <h1>
-          <span className="title text-primary">Fat </span>
-          Design
+          <span className="display text-primary">Fat </span>
+          UI
         </h1>
 
         <Typography />

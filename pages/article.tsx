@@ -6,6 +6,7 @@ import {
   faImage,
   faTags,
   faUserAlt,
+  IconDefinition,
 } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useState } from "react"
@@ -13,6 +14,7 @@ import ThemeSwitcher from "../components/ThemeSwitcher"
 import Link from "next/link"
 import Head from "next/head"
 import Footer from "../components/Footer"
+import Header from "../components/Header"
 
 const article = {
   author: {
@@ -44,10 +46,8 @@ export default function Article() {
       <Head>
         <title>Article | Fat UI</title>
       </Head>
-      <div
-        style={{ position: "absolute", zIndex: 2 }}
-        className="row end py-2 px-2 wide"
-      >
+
+      <Header>
         <Link href="/">
           <div className="mr-auto row">
             <button
@@ -118,7 +118,7 @@ export default function Article() {
             icon={faTags}
           />
         </button>
-      </div>
+      </Header>
 
       <article className={centered ? "centered" : ""}>
         <header>
@@ -193,7 +193,7 @@ export default function Article() {
 
           <h2>Heading (like this)</h2>
 
-          <p>Heading have some basic margin and bolder font.</p>
+          <p>Headings have some basic margin and bolder font.</p>
 
           <h3>Heres an example of an h3 heading</h3>
           <h4>Heres an example of an h4 heading</h4>
@@ -261,16 +261,23 @@ export default function Article() {
             <figcaption>— Unknown</figcaption>
           </figure>
 
-          <blockquote></blockquote>
-
           <h2>Images</h2>
 
           <p>They will not be bigger than the article's width.</p>
 
-          <img
-            src="https://meszarosdezso.com/assets/instagram_5.jpg"
-            alt="Article Cover"
-          />
+          <div className="image-with-attributes">
+            <img
+              src="https://meszarosdezso.com/assets/instagram_5.jpg"
+              alt="A lake somewhere in Hungary"
+            />
+            <span className="source">Source: Instagram</span>
+            <p className="description">
+              A lake somewhere in Hungary. An image can also have attributes.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
+              minus. Maxime autem dolorum tenetur eos vero, sint dignissimos
+              exercitationem quasi!
+            </p>
+          </div>
         </section>
       </article>
 
