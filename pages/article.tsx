@@ -14,6 +14,7 @@ import Link from "next/link"
 import Head from "next/head"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
+import Script from "next/script"
 
 const article = {
   author: {
@@ -58,6 +59,7 @@ export default function Article() {
 
   return (
     <div className="article-page">
+      <Script type="module" src="/scripts/main.js" />
       <Head>
         <title>Article | Fat UI</title>
       </Head>
