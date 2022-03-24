@@ -14,6 +14,7 @@ import Link from "next/link"
 import Head from "next/head"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
+import Script from "next/script"
 
 const article = {
   author: {
@@ -31,6 +32,22 @@ const article = {
   },
   title: "This page showcases how an article looks like",
   subtitle: "It can also have subtitles and a cover photo!",
+  codeblocks: [
+    {
+      language: "html",
+      source: `<script type="module" src="https://fat.meszarosdezso.com/scripts/main.js" />`,
+    },
+    {
+      language: "html",
+      source: `<pre class="codeblock rust">...</pre>`,
+    },
+    {
+      language: "rs",
+      source: `fn main() {
+  println!("It works!");
+}`,
+    },
+  ],
 }
 
 export default function Article() {
@@ -42,6 +59,7 @@ export default function Article() {
 
   return (
     <div className="article-page">
+      <Script type="module" src="/scripts/main.js" />
       <Head>
         <title>Article | Fat UI</title>
       </Head>
@@ -259,6 +277,17 @@ export default function Article() {
             </blockquote>
             <figcaption>— Unknown</figcaption>
           </figure>
+
+          <h2>Developers are supported!</h2>
+
+          {article.codeblocks.map(block => (
+            <pre
+              key={block.source.length}
+              className={`codeblock ${block.language}`}
+            >
+              {block.source}
+            </pre>
+          ))}
 
           <h2>Images</h2>
 

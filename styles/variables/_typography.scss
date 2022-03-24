@@ -130,3 +130,12 @@ $weight: 100;
   font-size: 0.8rem;
   font-weight: 600;
 }
+
+.codeblock {
+  padding: 1em;
+  border-radius: var(--radius-xs);
+  line-height: 1.5;
+  background-color: var(--grey-50);
+  overflow-x: scroll;
+  margin: 1rem auto;
+}
