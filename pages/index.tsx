@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Script from "next/script"
 import React from "react"
 import Banners from "../components/Banners"
 import Buttons from "../components/Buttons"
@@ -18,6 +19,7 @@ import Typography from "../components/Typography"
 export default function Home() {
   return (
     <div>
+      <Script type="module" src="/scripts/main.js" />
       <Head>
         <title>Fat UI</title>
       </Head>

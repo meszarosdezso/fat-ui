@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Notifications from "./Notifications"
 import Pagination from "./Pagination"
 import Switcher from "./Switcher"
+import YoutubeVideo from "./YouTube"
 
 export default function Components() {
   return (
@@ -82,6 +83,8 @@ export default function Components() {
       <Switcher />
 
       <Notifications />
+
+      <YoutubeVideo />
     </section>
   )
 }

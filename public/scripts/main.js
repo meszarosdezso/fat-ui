@@ -2,6 +2,7 @@
 /// <reference types="./index" />
 
 import hljs from "https://cdn.skypack.dev/highlight.js"
+import "./yt.js"
 
 const isDarkMode =
   document.documentElement.getAttribute("data-theme") === "dark"
