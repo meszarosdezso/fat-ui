@@ -34,7 +34,7 @@ const article = {
   codeblocks: [
     {
       language: "html",
-      source: `<script type="module" src="https://fat.meszarosdezso.com/main.js" />`,
+      source: `<script type="module" src="https://fat.meszarosdezso.com/scripts/main.js" />`,
     },
     {
       language: "html",
