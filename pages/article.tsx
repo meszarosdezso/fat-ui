@@ -306,6 +306,16 @@ export default function Article() {
               exercitationem quasi!
             </p>
           </div>
+
+          <h2>Embed YouTube videos</h2>
+
+          <p>
+            They will fill the horizontal space, while maintaining a 16 by 9
+            aspect ratio.
+          </p>
+
+          {/* @ts-ignore */}
+          <youtube-video uid="dQw4w9WgXcQ" />
         </section>
       </article>
 

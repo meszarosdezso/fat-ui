@@ -19,7 +19,6 @@ import Typography from "../components/Typography"
 export default function Home() {
   return (
     <div>
-      <Script type="module" src="/scripts/main.js" />
       <Head>
         <title>Fat UI</title>
       </Head>
