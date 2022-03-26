@@ -6,7 +6,7 @@
  * ### Usage
  * ```html
  * <youtube-video uid="dQw4w9WgXcQ" />
- * <youtube-video url="https://www.youtube.com/v/dQw4w9WgXcQ" />
+ * <youtube-video url="https://www.youtube.com/embed/dQw4w9WgXcQ" />
  * ```
  */
 class YoutubeVideo extends HTMLElement {
