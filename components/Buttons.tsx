@@ -1,5 +1,6 @@
 import {
   faHamburger,
+  faLongArrowLeft,
   faPizzaSlice,
   faPlus,
 } from "@fortawesome/free-solid-svg-icons"
@@ -18,7 +19,7 @@ export default function Buttons() {
         <button className={`light ${accent}`}>Light</button>
         <button className={`bordered ${accent}`}>Bordered</button>
         <button className={`disabled ${accent}`}>Disabled</button>
-        <button className={`${accent}`}>
+        <button className={`${accent} nowrap`}>
           <FontAwesomeIcon className="button-icon" icon={faHamburger} />
           With icon
         </button>
