@@ -1,7 +1,4 @@
 #Home {
-  padding: 4rem;
-  padding-bottom: 6rem;
-
   section {
     margin: 3rem 0;
   }
@@ -21,26 +18,9 @@
       .color-dots {
         display: flex;
         .color-dot {
-          width: 3.2rem;
-          height: 3.2rem;
-          border-radius: 50%;
-
           &:not(:first-child) {
             margin-left: -1.1rem;
           }
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: 700px) {
-    padding: 2rem;
-
-    .color-groups .color-group {
-      .color-dots {
-        .color-dot {
-          width: 2.4rem;
-          height: 2.4rem;
         }
       }
     }
@@ -65,18 +45,8 @@
   }
 }
 
-footer#Footer {
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-  padding: 2rem;
-  text-align: center;
-  color: #aaa;
-}
-
 header#Header {
-  width: 100%;
   inset: 0;
-  position: absolute;
   z-index: 2;
   bottom: unset;
 }

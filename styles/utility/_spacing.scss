@@ -18,6 +18,14 @@ $sides: "top", "bottom", "left", "right";
     }
   }
 
+  #{".p-" + $classSuffix} {
+    padding: $value !important;
+  }
+
+  #{".m-" + $classSuffix} {
+    margin: $value !important;
+  }
+
   #{".px-" + $classSuffix} {
     padding-left: $value !important;
     padding-right: $value !important;

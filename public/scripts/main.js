@@ -1,5 +1,5 @@
 // @ts-check
-/// <reference types="./index" />
+/// <reference types="." />
 
 import hljs from "https://cdn.skypack.dev/highlight.js"
 import "./yt.js"
@@ -15,6 +15,7 @@ hljsStyles.href = `//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/$
 
 document.querySelector("head")?.prepend(hljsStyles)
 
-document.querySelectorAll("pre.codeblock").forEach(el => {
-  hljs.highlightElement(el)
-})
+for (const elem of document.querySelectorAll("pre.codeblock")) {
+  // @ts-ignore Bad typedefs for highlight.js
+  hljs.highlightElement(elem)
+}

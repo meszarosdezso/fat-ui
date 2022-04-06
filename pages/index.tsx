@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Script from "next/script"
 import React from "react"
 import Banners from "../components/Banners"
 import Buttons from "../components/Buttons"
@@ -21,7 +22,7 @@ export default function Home() {
       <Head>
         <title>Fat UI</title>
       </Head>
-      <div id={"Home"}>
+      <div className="p-4" id="Home">
         <Header fixed>
           <ThemeSwitcher />
         </Header>

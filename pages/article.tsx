@@ -314,7 +314,6 @@ export default function Article() {
             aspect ratio.
           </p>
 
-          {/* @ts-ignore */}
           <youtube-video uid="dQw4w9WgXcQ" />
         </section>
       </article>

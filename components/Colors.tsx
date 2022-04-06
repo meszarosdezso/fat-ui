@@ -51,7 +51,7 @@ const ColorGroup = ({
             variants={colorGroupVariants}
             style={{ backgroundColor: `var(--${color.name}-${shade})` }}
             key={`${color.name}-${shade}`}
-            className="color-dot"
+            className="color-dot circle"
           ></motion.div>
         ))}
       </motion.div>
