@@ -1,3 +1,50 @@
+form {
+  box-shadow: var(--shadow-2);
+  border-radius: var(--radius-default);
+  width: 90%;
+  margin: auto;
+  max-width: 600px;
+  text-align: center;
+  padding: 0 1rem;
+  padding-top: 3rem;
+  background: var(--card-bg);
+
+  .title {
+    margin-bottom: 3rem;
+    font-weight: 500;
+  }
+
+  .field {
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
+
+    &.row {
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      label {
+        margin-bottom: 0;
+        text-align: left;
+      }
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding: 2rem;
+  }
+}
+
 .search-bar {
   padding-left: 0.9rem;
   border-radius: var(--radius-default);
@@ -19,15 +66,19 @@
   }
 }
 
-input[type="text"] {
+input {
   color: var(--text);
   background: var(--grey-50);
   border: none;
   font-size: 0.9rem;
   padding: 0.7rem 0;
-  min-width: 200px;
   border-radius: var(--radius-default);
   padding-left: 0.7rem;
+
+  &[type="text"],
+  &[type="password"] {
+    min-width: 200px;
+  }
 
   &::placeholder {
     color: var(--grey-400);
@@ -133,5 +184,15 @@ textarea {
 
   &:active {
     opacity: 0.5;
+  }
+}
+
+html[data-theme="dark"] {
+  form {
+    .field {
+      input {
+        background: var(--grey-100);
+      }
+    }
   }
 }
